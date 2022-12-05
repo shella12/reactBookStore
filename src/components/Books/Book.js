@@ -10,6 +10,7 @@ const Book = (props) => {
         <h2 className="book-category">{category}</h2>
         <h2 className="book-title">{title}</h2>
         <h2 className="book-author">{author}</h2>
+        <button type="button" id={id}>Remove</button>
       </div>
     </div>
   );
