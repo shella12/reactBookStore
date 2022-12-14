@@ -1,8 +1,9 @@
 import { PropTypes } from 'prop-types';
+import { removeBook } from '../../redux/books/books';
 
 const Book = (props) => {
   const {
-    id, author, title, category,
+    id, author, title, category, dispatch,
   } = props;
   return (
     <div>
@@ -10,7 +11,7 @@ const Book = (props) => {
         <h2 className="book-category">{category}</h2>
         <h2 className="book-title">{title}</h2>
         <h2 className="book-author">{author}</h2>
-        <button type="button" id={id}>Remove</button>
+        <button type="button" onClick={() => dispatch(removeBook(id))}>Remove</button>
       </div>
     </div>
   );
@@ -22,6 +23,7 @@ Book.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
+  dispatch: PropTypes.func.isRequired,
 
 };
 export default Book;

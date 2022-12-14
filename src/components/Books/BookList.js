@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 import Book from './Book';
 
 const BookList = (props) => {
-  const { books } = props;
+  const { books, dispatch } = props;
   return (
     <div>
       <ul>
@@ -13,6 +13,7 @@ const BookList = (props) => {
             author={book.author}
             title={book.title}
             category={book.category}
+            dispatch={dispatch}
           />
         ))}
       </ul>
@@ -23,4 +24,5 @@ export default BookList;
 
 BookList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };

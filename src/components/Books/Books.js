@@ -7,7 +7,7 @@ const Books = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <BookList books={books} />
+      <BookList books={books} dispatch={dispatch} />
       <h2 className="add-book-heading">Add new book</h2>
       <NewBook dispatch={dispatch} />
     </div>
