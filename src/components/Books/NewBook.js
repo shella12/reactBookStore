@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { nanoid } from '@reduxjs/toolkit';
+import { nanoid } from '@reduxjs/toolkit';
 import { PropTypes } from 'prop-types';
 import { addBook } from '../../redux/books/books';
 
@@ -9,7 +9,13 @@ const NewBook = (props) => {
   const { dispatch } = props;
   const submitHandler = (event) => {
     event.preventDefault();
-    dispatch(addBook('90', title, author));
+    const bookObject = {
+      item_id: nanoid(),
+      title,
+      author,
+      category: '',
+    };
+    dispatch(addBook(bookObject));
     setAuthor('');
     setTitle('');
   };
