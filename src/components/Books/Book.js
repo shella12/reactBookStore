@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types';
-import { removeBook } from '../../redux/books/books';
+import { deleteBook } from '../../redux/books/books';
 
 const Book = (props) => {
   const {
@@ -11,7 +11,7 @@ const Book = (props) => {
         <h2 className="book-category">{category}</h2>
         <h2 className="book-title">{title}</h2>
         <h2 className="book-author">{author}</h2>
-        <button type="button" onClick={() => dispatch(removeBook(id))}>Remove</button>
+        <button type="button" onClick={() => dispatch(deleteBook(id))}>Remove</button>
       </div>
     </div>
   );
