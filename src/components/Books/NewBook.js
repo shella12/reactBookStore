@@ -6,7 +6,7 @@ import { addBook } from '../../redux/books/books';
 const NewBook = (props) => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  // const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('');
   const { dispatch } = props;
   const submitHandler = (event) => {
     event.preventDefault();
@@ -14,24 +14,24 @@ const NewBook = (props) => {
       item_id: nanoid(),
       title,
       author,
-      category: '',
+      category,
     };
     dispatch(addBook(bookObject));
     setAuthor('');
     setTitle('');
-    // setCategory('');
+    setCategory('');
   };
-  // const changeColor = (e) => {
-  //   e.target.style.color = '#000';
-  //   setCategory(e.target.value);
-  // };
+  const changeColor = (e) => {
+    e.target.style.color = '#000';
+    setCategory(e.target.value);
+  };
   return (
     <div>
       <form>
         <input className="input-text" type="text" value={title} placeholder="title" onChange={(e) => setTitle(e.target.value)} />
         <input className="input-text" type="text" value={author} placeholder="author" onChange={(e) => setAuthor(e.target.value)} />
         {/* eslint-disable-next-line react/jsx-curly-brace-presence */}
-        {/* <select
+        <select
           defaultValue="DEFAULT"
           className="input-select"
           name="categories"
@@ -49,7 +49,7 @@ const NewBook = (props) => {
           <option value="Comedy">Comedy</option>
           <option value="Horror">Horror</option>
           <option value="Thriler">Thriler</option>
-        </select> */}
+        </select>
         <button className="submitBtn" type="submit" onClick={(e) => submitHandler(e)}>Submit</button>
       </form>
     </div>
