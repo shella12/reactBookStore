@@ -65,7 +65,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:shella12/reactBookStore.git
 ```
 
 ## Install

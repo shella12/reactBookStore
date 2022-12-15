@@ -5,7 +5,7 @@ const BookList = (props) => {
   const { books, dispatch } = props;
   return (
     <div>
-      <ul>
+      <ul className="book-ul">
         {books.map((book) => (
           <Book
             key={book.id}
