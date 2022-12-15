@@ -30,7 +30,7 @@ const Books = () => {
     message = error;
   }
   return (
-    <div>
+    <div className="books-cms">
       <BookList books={books} dispatch={dispatch} />
       <h2 className="add-book-heading">Add new book</h2>
       <NewBook dispatch={dispatch} />
