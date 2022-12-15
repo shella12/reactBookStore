@@ -18,7 +18,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [Math Magician] <a name="about-project"></a>
+# 📖 [Book Store] <a name="about-project"></a>
 
 > The Bookstore is a website similar to the "Awesome Books" website. This is a MVP version of it that allows you to:
 
